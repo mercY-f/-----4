@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SushiMaster - Доставка суши</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e74c3c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <!-- Уведомление об установке PWA -->
+    <div id="installPrompt" class="install-prompt">
+        <div class="install-content">
+            <h3>Установить приложение?</h3>
+            <p>Установите наше приложение для быстрого доступа к заказу суши</p>
+            <div class="install-buttons">
+                <button id="installBtn" class="btn-primary">Установить</button>
+                <button id="installCancel" class="btn-secondary">Позже</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>SushiMaster</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Главная</a>
+                <a href="products.html" class="nav-link">Меню</a>
+                <a href="cart.html" class="nav-link">Корзина <span id="cartCount">0</span></a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="team.html" class="nav-link">Команда</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная страница -->
+    <main id="main-content">
+        <!-- Слайдер категорий -->
+        <section class="hero">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="images/hero/slide1.jpg" alt="Суши сет">
+                    <div class="slide-content">
+                        <h2>Попробуйте наши сетты</h2>
+                        <p>Специальные предложения для больших компаний</p>
+                        <a href="products.html" class="btn-primary">Смотреть меню</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/hero/slide2.jpg" alt="Роллы">
+                    <div class="slide-content">
+                        <h2>Свежие роллы</h2>
+                        <p>Готовим из свежайших ингредиентов</p>
+                        <a href="products.html" class="btn-primary">Смотреть меню</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/hero/slide3.jpg" alt="Японская кухня">
+                    <div class="slide-content">
+                        <h2>Японская кухня</h2>
+                        <p>Уникальные рецепты от наших шеф-поваров</p>
+                        <a href="products.html" class="btn-primary">Смотреть меню</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="slider-btn prev">‹</button>
+                <button class="slider-btn next">›</button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <!-- Счетчик обратного отсчета -->
+        <section class="countdown-section">
+            <div class="container">
+                <h2>Акция закончится через:</h2>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <span class="countdown-label">Дней</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <span class="countdown-label">Часов</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <span class="countdown-label">Минут</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <span class="countdown-label">Секунд</span>
+                    </div>
+                </div>
+                <p class="countdown-text">Скидка 20% на все сетты при заказе от 1500 рублей</p>
+            </div>
+        </section>
+
+        <!-- Популярные товары -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Популярные позиции</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/philadelphia.jpg" alt="Филадельфия">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ролл Филадельфия</h3>
+                            <p class="product-description">Лосось, сливочный сыр, огурец, авокадо</p>
+                            <div class="product-price">450 ₽</div>
+                            <button class="btn-add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/california.jpg" alt="Калифорния">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ролл Калифорния</h3>
+                            <p class="product-description">Краб, авокадо, огурец, икра масаго</p>
+                            <div class="product-price">380 ₽</div>
+                            <button class="btn-add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/unagi.jpg" alt="Унаги">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ролл Унаги</h3>
+                            <p class="product-description">Угорь, авокадо, огурец, соус унаги</p>
+                            <div class="product-price">520 ₽</div>
+                            <button class="btn-add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/products/tempura.jpg" alt="Темпура">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ролл Темпура</h3>
+                            <p class="product-description">Креветка темпура, авокадо, соус спайси</p>
+                            <div class="product-price">490 ₽</div>
+                            <button class="btn-add-to-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="products.html" class="btn-secondary">Смотреть все</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Отзывы в формате сторис -->
+        <section class="stories-section">
+            <div class="container">
+                <h2 class="section-title">Отзывы наших клиентов</h2>
+                <div class="stories-container">
+                    <div class="story">
+                        <div class="story-avatar">
+                            <img src="images/reviews/avatar-maria.jpg" alt="Мария">
+                        </div>
+                        <div class="story-content">
+                            <p>"Лучшие суши в городе! Заказываю регулярно, всегда свежие и вкусные."</p>
+                            <span class="story-author">Мария</span>
+                        </div>
+                    </div>
+                    <div class="story">
+                        <div class="story-avatar">
+                            <img src="images/reviews/avatar-aleksey.jpg" alt="Алексей">
+                        </div>
+                        <div class="story-content">
+                            <p>"Быстрая доставка и отличное качество. Рекомендую всем!"</p>
+                            <span class="story-author">Алексей</span>
+                        </div>
+                    </div>
+                    <div class="story">
+                        <div class="story-avatar">
+                            <img src="images/reviews/avatar-olga.jpg" alt="Ольга">
+                        </div>
+                        <div class="story-content">
+                            <p>"Заказывали сет на день рождения, все были в восторге! Спасибо!"</p>
+                            <span class="story-author">Ольга</span>
+                        </div>
+                    </div>
+                    <div class="story">
+                        <div class="story-avatar">
+                            <img src="images/reviews/avatar-dmitry.jpg" alt="Дмитрий">
+                        </div>
+                        <div class="story-content">
+                            <p>"Цены адекватные, порции большие. Буду заказывать еще!"</p>
+                            <span class="story-author">Дмитрий</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи -->
+        <section class="contact-form-section">
+            <div class="container">
+                <h2 class="section-title">Обратная связь</h2>
+                <form id="feedbackForm" class="feedback-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Отправить</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SushiMaster</h3>
+                    <p>Доставка свежих суши и роллов в вашем городе. Быстро, вкусно, качественно.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>+7 (999) 123-45-67</p>
+                    <p>info@sushimaster.ru</p>
+                    <p>ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Время работы</h4>
+                    <p>Пн-Вс: 10:00 - 23:00</p>
+                    <p>Доставка: 11:00 - 22:30</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="products.html">Меню</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="coming-soon.html">Скоро будет</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SushiMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

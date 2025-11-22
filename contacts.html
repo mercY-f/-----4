@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - SushiMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e74c3c">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>SushiMaster</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="products.html" class="nav-link">Меню</a>
+                <a href="cart.html" class="nav-link">Корзина <span id="cartCount">0</span></a>
+                <a href="contacts.html" class="nav-link active">Контакты</a>
+                <a href="team.html" class="nav-link">Команда</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Страница контактов -->
+    <main class="contacts-page">
+        <div class="container">
+            <h1 class="page-title">Контакты</h1>
+            
+            <div class="contacts-container">
+                <div class="contact-info">
+                    <h2>Наши контакты</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Телефон</h3>
+                            <p>+7 (999) 123-45-67</p>
+                            <p>+7 (999) 765-43-21</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@sushimaster.ru</p>
+                            <p>order@sushimaster.ru</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Адрес</h3>
+                            <p>ул. Примерная, 123</p>
+                            <p>г. Москва, 123456</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h3>Время работы</h3>
+                            <p>Пн-Вс: 10:00 - 23:00</p>
+                            <p>Доставка: 11:00 - 22:30</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3>Мы в социальных сетях</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">📘</a>
+                            <a href="#" class="social-icon">📷</a>
+                            <a href="#" class="social-icon">🐦</a>
+                            <a href="#" class="social-icon">📹</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <h3>Карта расположения</h3>
+                        <p>Здесь будет интерактивная карта с нашим местоположением</p>
+                        <div class="map-image">
+                            <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Карта">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Форма обратной связи -->
+            <section class="contact-form-section">
+                <h2 class="section-title">Обратная связь</h2>
+                <form id="contactForm" class="feedback-form">
+                    <div class="form-group">
+                        <label for="contactName">Ваше имя</label>
+                        <input type="text" id="contactName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Телефон</label>
+                        <input type="tel" id="contactPhone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Тема</label>
+                        <select id="contactSubject" name="subject">
+                            <option value="general">Общий вопрос</option>
+                            <option value="order">Вопрос по заказу</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                            <option value="partnership">Сотрудничество</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Сообщение</label>
+                        <textarea id="contactMessage" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Отправить</button>
+                </form>
+            </section>
+            
+            <!-- FAQ -->
+            <section class="faq-section">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Какие зоны доставки вы обслуживаете?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Мы осуществляем доставку по всему городу в пределах МКАД. Стоимость доставки зависит от расстояния. При заказе от 1000 рублей доставка бесплатная.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Сколько времени занимает доставка?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Среднее время доставки составляет 45-60 минут. В пиковые часы доставка может занять до 90 минут. Вы можете выбрать удобное время доставки при оформлении заказа.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Какие способы оплаты вы принимаете?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Мы принимаем наличные, банковские карты (онлайн и при получении), а также электронные платежи через популярные системы.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Можно ли отменить заказ?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Вы можете отменить заказ в течение 10 минут после его оформления. После этого времени отмена возможна только по телефону и зависит от стадии приготовления заказа.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SushiMaster</h3>
+                    <p>Доставка свежих суши и роллов в вашем городе. Быстро, вкусно, качественно.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>+7 (999) 123-45-67</p>
+                    <p>info@sushimaster.ru</p>
+                    <p>ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Время работы</h4>
+                    <p>Пн-Вс: 10:00 - 23:00</p>
+                    <p>Доставка: 11:00 - 22:30</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="products.html">Меню</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="coming-soon.html">Скоро будет</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SushiMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contacts.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

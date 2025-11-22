@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скоро - SushiMaster</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e74c3c">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>SushiMaster</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="products.html" class="nav-link">Меню</a>
+                <a href="cart.html" class="nav-link">Корзина <span id="cartCount">0</span></a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="team.html" class="nav-link">Команда</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Страница "Скоро будет" -->
+    <main class="coming-soon-page">
+        <div class="container">
+            <div class="coming-soon-content">
+                <div class="coming-soon-icon">🚧</div>
+                <h1>Скоро будет</h1>
+                <p>Мы работаем над созданием этой страницы. Скоро здесь появится что-то интересное!</p>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="cs-days">00</span>
+                        <span class="countdown-label">Дней</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="cs-hours">00</span>
+                        <span class="countdown-label">Часов</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="cs-minutes">00</span>
+                        <span class="countdown-label">Минут</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="cs-seconds">00</span>
+                        <span class="countdown-label">Секунд</span>
+                    </div>
+                </div>
+                <p>А пока вы можете ознакомиться с другими разделами нашего сайта</p>
+                <div class="coming-soon-links">
+                    <a href="products.html" class="btn-primary">Посмотреть меню</a>
+                    <a href="index.html" class="btn-secondary">На главную</a>
+                </div>
+            </div>
+            
+            <!-- Предварительный просмотр -->
+            <section class="preview-section">
+                <h2>Что будет на этой странице?</h2>
+                <div class="preview-container">
+                    <div class="preview-item">
+                        <h3>Новые блюда</h3>
+                        <p>Мы готовим для вас новые эксклюзивные рецепты от наших шеф-поваров</p>
+                    </div>
+                    <div class="preview-item">
+                        <h3>Акции и скидки</h3>
+                        <p>Специальные предложения для постоянных клиентов и новые акции</p>
+                    </div>
+                    <div class="preview-item">
+                        <h3>Доставка в новые районы</h3>
+                        <p>Расширяем зону доставки чтобы больше клиентов могли наслаждаться нашими блюдами</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SushiMaster</h3>
+                    <p>Доставка свежих суши и роллов в вашем городе. Быстро, вкусно, качественно.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>+7 (999) 123-45-67</p>
+                    <p>info@sushimaster.ru</p>
+                    <p>ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Время работы</h4>
+                    <p>Пн-Вс: 10:00 - 23:00</p>
+                    <p>Доставка: 11:00 - 22:30</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="products.html">Меню</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="coming-soon.html">Скоро будет</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 SushiMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/coming-soon.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
